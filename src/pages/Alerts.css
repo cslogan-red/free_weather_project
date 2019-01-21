@@ -1,0 +1,31 @@
+.alerts__container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 80vh;
+    padding-right: .5em;
+    padding-left: .5em;
+    padding-top: 1em;
+    margin-top: calc(30px + 2vmin);
+}
+
+.alerts__header--label {
+
+    padding-bottom: .25em;
+}
+
+.alerts__tile--container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    margin-bottom: 1em;
+}
+
+.alerts__none--label {
+
+    padding-top: 30vh;
+    text-align: center;
+}

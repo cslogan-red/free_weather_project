@@ -1,0 +1,16 @@
+.home__weather--container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 80vh;
+    padding-right: .5em;
+    padding-top: 1em;
+    margin-top: calc(30px + 2vmin);
+}
+
+.home__search--label {
+
+    padding-top: 30vh;
+    text-align: center;
+}

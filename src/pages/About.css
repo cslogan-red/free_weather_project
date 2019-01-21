@@ -1,0 +1,45 @@
+.about__container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 80vh;
+    padding-right: .5em;
+    padding-left: .5em;
+    padding-top: 1em;
+    margin-top: calc(30px + 2vmin);
+}
+
+.about__header--label {
+
+    padding-bottom: .25em;
+}
+
+.about__content {
+
+    font-size: calc( 12px + 2vmin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about__content a {
+
+    color: white;
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+.about__content--footer {
+
+    font-size: calc( 4px + 2vmin);
+}
+
+.about__icon {
+
+    height: 4em;
+    height: calc( 4em + 2vmin);
+    width: 4em;
+    width: calc( 4em + 2vmin);
+}

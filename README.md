@@ -1,0 +1,24 @@
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Overview
+
+Free Weather Project (FWP) builds on the base concepts established in [weather_react](https://github.com/cslogan-red/weather_react) and [weather_react_redux](https://github.com/cslogan-red/weather_react_redux) but creates an app with the types of patterns you'd see at scale.
+
+Check out the live version at: [Free Weather Project](https://freeweatherproject.net/)
+
+From the CSS, to the type ahead search, to the serverless back end, I've built the FWP completely from scratch and it's meant to showcase a number of design patterns that are resuable across any React app.
+
+It utilizes the [DarkSky API](https://darksky.net/poweredby/), along with the Google Geocoding API (each obfuscated via the API layer) for weather results based on any entered location, along
+with geotracking for weather in your current location, if allowed.
+
+Open sourced under the [MIT License](https://github.com/cslogan-red/free_weather_project/blob/master/LICENSE).
+
+### Note
+
+This is not a supported app and this repo does not include all dependencies necessary for a build, development or otherwise, simply use the provided source how you will -and at your own risk- Happy coding!
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

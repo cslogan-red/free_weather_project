@@ -1,0 +1,27 @@
+.app__container {
+	
+    background-color: #0a162f;
+    min-height: 100vh;
+    min-width: 350px;
+    font-size: calc(15px + 2vmin);
+    color: white;
+}
+
+.app__fixed--menu {
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px grey solid;
+    box-shadow: 0 0 5px;
+    z-index: 1000;
+}
+
+.app__loading--container {
+
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}

@@ -1,0 +1,19 @@
+.seven-day__container {
+
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+.seven-day__header--label {
+
+    padding-bottom: .25em;
+}
+
+.seven-day__tile--container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin)
+}
