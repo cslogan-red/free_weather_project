@@ -2,7 +2,7 @@
 
     display: flex;
     align-items: center;
-    background-color: #111e38;
+    background-color: #acacbb;
     padding: .15em;
 }
 
@@ -12,6 +12,8 @@
     flex: 3;
     flex-direction: column;
     min-height: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
 }
 
 .hourly__header {
@@ -23,6 +25,7 @@
 .hourly__detail {
 
     padding-left: .5em;
+    padding-right: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;

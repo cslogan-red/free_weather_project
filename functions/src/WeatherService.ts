@@ -42,17 +42,15 @@ export default class WeatherService {
                 };
                 retObj.daily.push( day);
             });
-            // build hourly, 12 hours out
+            // build hourly
             RESOLVE.hourly.data.map( ( item, i) => {
-                if ( i >= 0 &&  i < 12) {
-                    const hour = {
-                        temp : Math.round( item.temperature) + TEMP_UNIT,
-                        time : item.time,
-                        icon : item.icon,
-                      precip : Math.round( item.precipProbability * 100)
-                    };
-                    retObj.hourly.push( hour);
-                }
+                const hour = {
+                    temp : Math.round( item.temperature) + TEMP_UNIT,
+                    time : item.time,
+                    icon : item.icon,
+                    precip : Math.round( item.precipProbability * 100)
+                };
+                retObj.hourly.push( hour);
             });
             // build alerts, if present
             if ( RESOLVE.alerts) {

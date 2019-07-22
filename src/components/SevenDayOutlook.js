@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SevenDayOutlook.css';
 import WeatherTile from './WeatherTile';
+import constants from '../constants';
 
 class SevenDayOutlook extends Component {
 
@@ -13,11 +14,11 @@ class SevenDayOutlook extends Component {
                 { outlook && outlook.length ? (
                     <div className="seven-day__container">
                         <div className="seven-day__header--label">
-                            <span>Outlook</span>
+                            <span>{constants.outlook.title}</span>
                         </div>
                         <div className="seven-day__tile--container">
                             {outlook.map( (conditions, i) => 
-                                <WeatherTile conditions={conditions} key={i} />)}
+                                i > 0 && <WeatherTile conditions={conditions} key={i} />)}
                         </div>
                     </div>
                 ) : ('') }

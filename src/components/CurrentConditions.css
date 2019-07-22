@@ -1,11 +1,13 @@
 .current__container {
 
     padding-left: .5em;
+    margin-top: .25rem;
 }
 
 .current__header--label {
 
     padding-bottom: .25em;
+    color: #ffffff;
 }
 
 .current__rightNow, .current__hourly--wrapper {
@@ -14,8 +16,8 @@
 }
 .current__rightNow {
     
+    background-color: #acacbb;
     padding: .25em 0 .25em .5em;
-    margin-bottom: .5em;
     border: 2px solid white;
     border-radius: 5px;
 }
@@ -55,9 +57,8 @@
     justify-content: flex-start;
     overflow-y: hidden;
     overflow-x: scroll;
-    background-color: #111e38;
+    background-color: #acacbb;
     margin-top: .25em;
-    padding-bottom: .25em;
     border-radius: 5px;
     min-height: 60px;
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Alerts.css';
 import WeatherAlert from '../components/WeatherAlert';
+import constants from '../constants';
+
 /**
  * @abstract Alerts page component, represents alerts landing page, mounted via App.js
  * @author Chase
@@ -16,7 +18,7 @@ class Alerts extends Component {
                 { alerts && alerts.length ? (
                     <div className="alerts__container">
                         <div className="alerts__header--label">
-                            <span>Active Alerts</span>
+                            <span>{constants.alerts.title}</span>
                         </div>
                         <div className="alerts__tile--container">
                             {alerts.map( (alert, i) => 
@@ -25,7 +27,7 @@ class Alerts extends Component {
                     </div>
                 ) : (
                     <div className="alerts__none--label">
-                        There are no active alerts.
+                        {constants.alerts.none}
                     </div>
                 ) }
             </div>

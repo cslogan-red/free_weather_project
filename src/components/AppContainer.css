@@ -1,10 +1,10 @@
 .app__container {
 	
-    background-color: #0a162f;
+    background-color: #568dff;
     min-height: 100vh;
     min-width: 350px;
     font-size: calc(15px + 2vmin);
-    color: white;
+    color: #0a162f;
 }
 
 .app__fixed--menu {

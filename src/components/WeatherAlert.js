@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './WeatherAlert.css';
+import constants from '../constants';
 
 class WeatherAlert extends Component {
 
@@ -10,6 +11,7 @@ class WeatherAlert extends Component {
              description = this.props.alert ? this.props.alert.description : '',
                 severity = this.props.alert ? this.props.alert.severity : '',
                    title = this.props.alert ? this.props.alert.title : '';
+        const alerts = constants.alerts;
         return(
             <div>
                 <div className="alert__wrapper">
@@ -18,8 +20,8 @@ class WeatherAlert extends Component {
                             <span>{title}</span>
                         </div>
                         <div className="alert__detail">
-                            <div><span>Expires: {expires}</span></div>
-                            <div><span>Severity: {severity}</span></div>
+                            <div><span>{alerts.expires} {expires}</span></div>
+                            <div><span>{alerts.severity} {severity}</span></div>
                             <p>
                                 <label>{description}</label>
                             </p>

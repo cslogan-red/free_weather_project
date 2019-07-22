@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Menu.css';
 import Icon from '../icons/Icon';
 import { CSSTransitionGroup } from 'react-transition-group';
+import constants from '../constants';
 
 class Menu extends Component {
 
@@ -22,6 +23,7 @@ class Menu extends Component {
     render() {
 
         const { showMenu } = this.props;
+        const menu = constants.menu;
         return (
             <div >
                 <CSSTransitionGroup
@@ -34,27 +36,27 @@ class Menu extends Component {
                         <div className="menu__wrapper" key={"menuWrapper"}>
                             <div className="menu__content">
                                 <div className="menu__header">
-                                    Free Weather Project
+                                    {menu.title}
                                 </div>
                                 <div className="menu__content--nav">
                                     <Link to="/" className="menu__content--link">
                                         <div onClick={this._handleMyLocationClick}>
-                                            <label>My Location</label>
+                                            <label>{menu.myLoc}</label>
                                         </div>
                                     </Link>
                                     <Link to="/" className="menu__content--link">
                                         <div onClick={this.props.onMenuClick}>
-                                            <label>Home</label>
+                                            <label>{menu.home}</label>
                                         </div>
                                     </Link>
                                     <Link to="/alerts" className="menu__content--link">
                                         <div onClick={this.props.onMenuClick}>
-                                            <label>Active Alerts</label>
+                                            <label>{menu.alerts}</label>
                                         </div>
                                     </Link>
                                     <Link to="/about" className="menu__content--link">
                                         <div onClick={this.props.onMenuClick}>
-                                            <label>About</label>
+                                            <label>{menu.about}</label>
                                         </div>
                                     </Link>
                                 </div>
@@ -62,9 +64,9 @@ class Menu extends Component {
                                     <div>
                                         <Icon className="menu__icon--powered-by" 
                                               name="partly-cloudy-night" fill="#13306d" />
-                                        <a href="https://darksky.net/poweredby/"
+                                        <a href={menu.poweredByUrl}
                                            rel="noopener noreferrer"
-                                           target="_blank">Powered by DarkSky</a>
+                                           target="_blank">{menu.poweredBy}</a>
                                     </div>
                                 </div>
                             </div>

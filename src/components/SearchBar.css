@@ -64,7 +64,6 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     padding-bottom: .1em;
-    background-color: #0a162f;
 }
 
 .search__result {
@@ -72,12 +71,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: black;
-    border: 1px solid grey;
+    color: #0a162f;
     width: 90%;
     padding-left: .25em;
-    box-shadow: 0px 0px 3px 1px #757779;
 }
 
 .search__result .search__icon {

@@ -3,6 +3,7 @@ import './CurrentConditions.css';
 import HourlyOutlook from './HourlyOutlook';
 import Icon from '../icons/Icon';
 import { CSSTransitionGroup } from 'react-transition-group';
+import constants from '../constants';
 
 class CurrentConditions extends Component {
 
@@ -23,6 +24,7 @@ class CurrentConditions extends Component {
         
         const { location, current, locationName,
                 hourly, showHourly } = this.props;
+        const currentConditions = constants.currentConditions;
         return(
             <div>
                 { location ? (
@@ -31,13 +33,13 @@ class CurrentConditions extends Component {
                             <span>{locationName}</span>
                         </div>
                         <div className="current__rightNow">
-                            <div className="current__rightNow--label">Right Now</div>
+                            <div className="current__rightNow--label">{currentConditions.rightNow}</div>
                             <div className="current__rightNow--flex">
                                 <div>
                                     <div>{current.summary}, {current.temp}</div>
-                                    <div><span>(feels like {current.feelsLikeTemp})</span></div>
-                                    <div>Relative humidity is {current.humidity}%</div>
-                                    <div>Wind is {current.windSpeed}MPH</div>
+                                    <div><span>{currentConditions.feelsLike} {current.feelsLikeTemp})</span></div>
+                                    <div>{currentConditions.humidity} {current.humidity}%</div>
+                                    <div>{currentConditions.wind} {current.windSpeed}{currentConditions.mph}</div>
                                 </div>
                                 <div>
                                     <Icon name={current.icon} width={100} fill="#FFF" />
