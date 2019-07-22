@@ -59,13 +59,15 @@ class Home extends Component {
                     retVal.firstDay.push(hourly[i]);
                     i++;
                 } else {
-                    retVal.secondDay.push(...[ hourly[i-5],hourly[i-4],hourly[i-3],hourly[i-2],hourly[i-1],hourly[i] ]);
+                    retVal.firstDay.push(hourly[i]);
+                    retVal.secondDay.push(...[hourly[i-6], hourly[i-5], hourly[i-4], hourly[i-3], hourly[i-2], hourly[i-1], hourly[i]]);
                     i++;
                     while (i < hourly.length) {
                         if (hourly[i] && hourly[i].time !== dayDelimiter) {
                             retVal.secondDay.push(hourly[i]);
                             i++;
                         } else {
+                            retVal.secondDay.push(hourly[i]);
                             i = hourly.length;
                         }
                     }

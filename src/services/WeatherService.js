@@ -56,7 +56,7 @@ class WeatherService {
     // converts unix time stamp to locale time
     _toLocalTime = ( unixTime, timezone) => {
         let retVal = '';
-        if ( unixTime) retVal = new Date( unixTime*1000)
+        if ( unixTime) retVal = new Date( unixTime * 1000)
             .toLocaleTimeString( 'en-US', { timeZone: timezone });
         return retVal;
     }
@@ -86,8 +86,10 @@ class WeatherService {
     // converts unix time stamp to locale date
     _toLocalDate = ( unixTime, timezone) => {
         let retVal = '';
-        if ( unixTime) retVal = new Date( unixTime*1000)
-            .toLocaleDateString( 'en-US', { timeZone: timezone });
+        if ( unixTime) {
+            const temp = new Date( unixTime * 1000).toDateString( 'en-US', { timeZone: timezone });
+            retVal = temp.replace(' ', ', ');
+        }
         return retVal;
     }
 }

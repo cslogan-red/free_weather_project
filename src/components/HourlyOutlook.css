@@ -2,7 +2,6 @@
 
     display: flex;
     align-items: center;
-    background-color: #acacbb;
     padding: .15em;
 }
 
@@ -14,6 +13,7 @@
     min-height: 60px;
     border: 1px solid #ffffff;
     border-radius: 2px;
+    background-color: #acacbb;
 }
 
 .hourly__header {

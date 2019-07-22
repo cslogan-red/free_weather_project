@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './About.css';
 import Icon from '../icons/Icon';
+import constants from '../constants';
+
 /**
  * @abstract About page component, represents simple about page, mounted via App.js
  * @author Chase
@@ -10,44 +12,39 @@ class About extends Component {
     // render implementation
     render() {
 
+        const about = constants.about;
         return (
             <div>
                 <div className="about__container">
                     <div className="about__content">
                         <div>
                             <Icon className="about__icon" 
-                                name="clear-day" fill="#FFF" />
+                                  name="clear-day" fill="#FFF" />
                         </div>
                         <p>
-                            <label>No ads, no drama, it's just free weather.</label>
+                            <label>{about.slogan}</label>
                         </p>
                         <p>
                             <label>
-                                Check out our repo, 
-                                    <a href="https://github.com/cslogan-red/free_weather_project/"
-                                       rel="noopener noreferrer"
-                                       target="_blank">Free Weather Project</a>
+                                {about.repo}<a href="https://github.com/cslogan-red/free_weather_project/" 
+                                               rel="noopener noreferrer" 
+                                               target="_blank">{about.appTitle}
+                                            </a>
                             </label>
                         </p>
                         <p>
-                            Credit to
-                                <a href="https://darksky.net/poweredby/"
-                                    rel="noopener noreferrer"
-                                    target="_blank">Dark Sky's API</a>for the weather service,
-                                and to
-                                <a href="http://adamwhitcroft.com/climacons/"
-                                    rel="noopener noreferrer"
-                                    target="_blank">@adamwhitcroft</a>for the great icons.
+                            {about.credit}<a href="https://darksky.net/poweredby/"
+                                              rel="noopener noreferrer"
+                                              target="_blank">{about.api}
+                                          </a>
+                            {about.credit2}<a href="http://adamwhitcroft.com/climacons/"
+                                              rel="noopener noreferrer"
+                                              target="_blank">{about.icons}
+                                          </a>{about.credit3}
                         </p>
                         <div className="about__content--footer">
-                            <p>
-                                Disclaimer: This site uses cookies, if you allow location access,
-                                it offers you weather in your current location. We DO NOT solicit 
-                                any of the anonymous location data collected to ANYONE, it's used
-                                solely for providing the weather. Free Weather Project is meant to 
-                                be totally free, no ads, no drama, it's just free weather!
-                            </p>
-                            <p>Copyright (c) 2019 Chase@FreeWeatherProject</p>
+                            <p>{about.disclaimer}</p>
+                            <p>{about.copyright}</p>
                         </div>
                     </div>
                 </div>

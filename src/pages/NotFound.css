@@ -1,5 +1,6 @@
 .not-found__label {
 
-    padding-top: 30vh;
+    padding: 30vh 2rem;
     text-align: center;
+    color: #ffffff;
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './NotFound.css';
+import constants from '../constants';
+
 /**
  * @abstract 404 page component, mounted via App.js
  * @author Chase
@@ -12,7 +14,7 @@ class NotFound extends Component {
         return (
             <div>
                 <div className="not-found__label">
-                    Requested Resource Not Found
+                    {constants.notFound}
                 </div>
             </div>
         );
