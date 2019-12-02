@@ -21,7 +21,7 @@ class Alerts extends Component {
                             <span>{constants.alerts.title}</span>
                         </div>
                         <div className="alerts__tile--container">
-                            {alerts.map( (alert, i) => 
+                            {alerts.map((alert, i) => 
                                 <WeatherAlert alert={alert} key={i} />)}
                         </div>
                     </div>

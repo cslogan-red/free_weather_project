@@ -13,13 +13,13 @@ const _getShowHourly = state => state.hourly.show;
 export function* _hourlyClick() {
 
     try {
-        const HOURLY = yield select( _getShowHourly);
-        if ( HOURLY) {
-            yield put( { type : HOURLY_HIDE});
+        const HOURLY = yield select(_getShowHourly);
+        if (HOURLY) {
+            yield put({ type : HOURLY_HIDE});
         } else {
-            yield put( { type : HOURLY_SHOW});
+            yield put({ type : HOURLY_SHOW});
         }
-    } catch ( error) {
-        yield put( { type : HOURLY_HIDE});
+    } catch (error) {
+        yield put({ type : HOURLY_HIDE});
     }
 }

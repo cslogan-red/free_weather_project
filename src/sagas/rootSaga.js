@@ -15,12 +15,12 @@ import { LOAD_APP, SEARCH_CHANGE, TYPE_AHEAD_CHANGE,
 export function* rootSaga() {
     
     yield all([
-        takeEvery( LOAD_APP, _loadApp),
-        takeEvery( SEARCH_CHANGE, _searchChange),
-        takeEvery( TYPE_AHEAD_CHANGE, _typeAheadSearch),
-        takeEvery( HOURLY_CLICK, _hourlyClick),
-        takeEvery( MENU_CLICK, _menuClick),
-        takeEvery( MENU_LOCATION, _menuLocation)
+        takeEvery(LOAD_APP, _loadApp),
+        takeEvery(SEARCH_CHANGE, _searchChange),
+        takeEvery(TYPE_AHEAD_CHANGE, _typeAheadSearch),
+        takeEvery(HOURLY_CLICK, _hourlyClick),
+        takeEvery(MENU_CLICK, _menuClick),
+        takeEvery(MENU_LOCATION, _menuLocation)
     ]);
 }
 

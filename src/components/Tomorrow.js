@@ -12,7 +12,6 @@ class Tomorrow extends Component {
         this.state = {
             showHourly: false
         };
-        this._handleTomorrowClick = this._handleTomorrowClick.bind( this);
     }
 
     _handleTomorrowClick = () => {
@@ -43,7 +42,7 @@ class Tomorrow extends Component {
                                 transitionLeaveTimeout={300}>
                                     {showHourly && hourly &&
                                         <div className="current__hourly--wrapper" key={"hourlyWrapper"}>
-                                            {hourly.map( (item, i) => 
+                                            {hourly.map((item, i) => 
                                                 <HourlyOutlook 
                                                     key={i} 
                                                     icon={item.icon} 

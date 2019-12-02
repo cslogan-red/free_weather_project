@@ -12,7 +12,7 @@ class HourlyOutlook extends Component {
             <div className="hourly__wrapper">
                 <div className="hourly__container">
                     <div className="hourly__detail">
-                        <Icon name={icon} width={50} fill="#FFF" />
+                        <Icon name={icon} width={50} fill="#0da6ff" />
                     </div>
                     <div className="hourly__detail">
                         <span>{hour}</span>
@@ -21,7 +21,7 @@ class HourlyOutlook extends Component {
                         <span>{temp}</span>
                     </div>
                     <div className="hourly__detail">
-                        <Icon name={"rain"} width={50} fill="#FFF" />
+                        <Icon name={"rain"} width={50} fill="#0da6ff" />
                         <span>{precip}%</span>
                     </div>
                 </div>

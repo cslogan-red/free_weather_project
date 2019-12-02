@@ -1,6 +1,6 @@
 .app__container {
 	
-    background-color: #568dff;
+    background-color: #145cf3;
     min-height: 100vh;
     min-width: 350px;
     font-size: calc(15px + 2vmin);
@@ -14,7 +14,7 @@
     top: 0;
     width: 100%;
     background-color: #f9f9f9;
-    border-bottom: 1px grey solid;
+    border-bottom: 1px #0da6ff solid;
     box-shadow: 0 0 5px;
     z-index: 1000;
 }

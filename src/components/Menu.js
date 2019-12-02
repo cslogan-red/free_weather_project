@@ -7,14 +7,8 @@ import constants from '../constants';
 
 class Menu extends Component {
 
-    constructor( props) {
-
-        super( props);
-        this._handleMyLocationClick = this._handleMyLocationClick.bind( this);
-    }
-
     // my location click/touch handler
-    _handleMyLocationClick() {
+    _handleMyLocationClick = () => {
 
         this.props.onMyLocation();
     }

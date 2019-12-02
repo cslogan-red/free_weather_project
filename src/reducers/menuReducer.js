@@ -10,14 +10,14 @@ const INIT_STATE = {
     getLocation : false
 };
 
-const _menuReducer = ( state = INIT_STATE, action) => {
-    switch ( action.type) {
+const _menuReducer = (state = INIT_STATE, action) => {
+    switch (action.type) {
         case MENU_LOCATION:
-            return Object.assign( {}, state, { showMenu : false, getLocation : true });
+            return Object.assign({}, state, { showMenu : false, getLocation : true });
         case MENU_SHOW:
-            return Object.assign( {}, state, { showMenu : true });
+            return Object.assign({}, state, { showMenu : true });
         case MENU_HIDE:
-            return Object.assign( {}, state, { showMenu : false });
+            return Object.assign({}, state, { showMenu : false });
         default:
             return state;
     }

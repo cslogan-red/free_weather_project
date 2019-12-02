@@ -10,16 +10,16 @@ const INIT_STATE = {
     hideForInit : true
 };
 
-const _loadAppReducer = ( state = INIT_STATE, action) => {
-    switch ( action.type) {
+const _loadAppReducer = (state = INIT_STATE, action) => {
+    switch (action.type) {
         case LOAD_APP:
-            return Object.assign( {}, state, { showSpinner : true });
+            return Object.assign({}, state, { showSpinner : true });
         case LOAD_APP_REQ:
-            return Object.assign( {}, state, { showSpinner : true });
+            return Object.assign({}, state, { showSpinner : true });
         case LOAD_APP_SUCCESS:
-            return Object.assign( {}, { showSpinner : false, hideForInit : false });
+            return Object.assign({}, { showSpinner : false, hideForInit : false });
         case LOAD_APP_FAILURE:
-            return Object.assign( {}, { showSpinner : false, hideForInit : true, 
+            return Object.assign({}, { showSpinner : false, hideForInit : true, 
                                               error : action.error });
         default:
             return state;
