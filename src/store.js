@@ -19,10 +19,10 @@ const _configureStore = () => {
     // create a redux store with rootReducer and middleware
     const store = createStore(
         rootReducer,
-        compose( applyMiddleware( sagaMiddleware)));
+        compose(applyMiddleware(sagaMiddleware)));
 
     // run the root saga
-    sagaMiddleware.run( rootSaga);
+    sagaMiddleware.run(rootSaga);
     return store;
 };
 

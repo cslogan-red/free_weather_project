@@ -22,21 +22,21 @@ class WeatherTile extends Component {
                             <span>{date}</span>
                         </div>
                         <div className="tile__detail">
-                            <span><Icon name={"up"} width={15} fill="#FFF" /> {tempHigh}</span>
-                            <span><Icon name={"down"} width={15} fill="#FFF" /> {tempLow}</span>
+                            <span><Icon name={"up"} width={15} fill="#0da6ff" /> {tempHigh}</span>
+                            <span><Icon name={"down"} width={15} fill="#0da6ff" /> {tempLow}</span>
                             <div>{summary}</div>
                             { sunriseTime ? (
                                 <div className="tile__rise--container">
-                                    <Icon name="sunrise" width={60} fill="#FFF" />
+                                    <Icon name="sunrise" width={60} fill="#0da6ff" />
                                     <label>{sunriseTime}</label>
-                                    <Icon name="sunset" width={60} fill="#FFF" />
+                                    <Icon name="sunset" width={60} fill="#0da6ff" />
                                     <label>{sunsetTime}</label>
                                 </div>
                             ) : ''}
                         </div>
                     </div>
                     <div className="tile__img--container">
-                        <Icon name={icon} width={100} fill="#FFF" />
+                        <Icon name={icon} width={100} fill="#0da6ff" />
                     </div>
                 </div>
             </div>

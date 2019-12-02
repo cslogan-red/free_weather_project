@@ -10,7 +10,7 @@ import _menuReducer from './menuReducer';
  * @abstract combined base reducer with all individual actionType reducers
  * @author Chase
  */
-const rootReducer = combineReducers( {
+const rootReducer = combineReducers({
         loadApp : _loadAppReducer, 
    searchChange : _searchChangeReducer,
       typeAhead : _typeAheadReducer,

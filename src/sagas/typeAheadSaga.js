@@ -15,14 +15,14 @@ export function* _typeAheadSearch() {
 
     try {
         // lookup current location
-        const LOC = yield select( _getLocation);
-        if ( LOC) {
-            const RESULT = yield call( new LocationService()._geocodeLocationAsync, LOC);
-            yield put( { type : TYPE_AHEAD_CHANGE_SUCCESS, payload : RESULT.formattedAddr});
+        const LOC = yield select(_getLocation);
+        if (LOC) {
+            const RESULT = yield call(new LocationService()._geocodeLocationAsync, LOC);
+            yield put({ type : TYPE_AHEAD_CHANGE_SUCCESS, payload : RESULT.formattedAddr});
         } else {
-            yield put( { type : TYPE_AHEAD_CHANGE_INIT});
+            yield put({ type : TYPE_AHEAD_CHANGE_INIT});
         }
-    } catch ( error) {
-        yield put( { type : TYPE_AHEAD_CHANGE_FAILURE, error : error.message });
+    } catch (error) {
+        yield put({ type : TYPE_AHEAD_CHANGE_FAILURE, error : error.message });
     }
 }

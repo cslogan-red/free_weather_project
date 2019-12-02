@@ -9,12 +9,12 @@ const INIT_STATE = {
     show : false 
 };
 
-const _hourlySearchReducer = ( state = INIT_STATE, action) => {
-    switch ( action.type) {
+const _hourlySearchReducer = (state = INIT_STATE, action) => {
+    switch (action.type) {
         case HOURLY_SHOW:
-            return Object.assign( {}, state, { show : true });
+            return Object.assign({}, state, { show : true });
         case HOURLY_HIDE:
-            return Object.assign( {}, state, { show : false });
+            return Object.assign({}, state, { show : false });
         default:
             return state;
     }

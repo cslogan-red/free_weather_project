@@ -11,7 +11,7 @@ export default class FirestoreService {
     constructor() {
         
         // init firebase access
-        admin.initializeApp( {
+        admin.initializeApp({
             credential : admin.credential.cert({
              projectId : '<YOUR PROJECT ID>',
            clientEmail : '<YOUR CLIENT EMAIL>',
@@ -21,25 +21,25 @@ export default class FirestoreService {
         });
         const DB = admin.firestore();
         const settings = { timestampsInSnapshots : true};
-        DB.settings( settings);
+        DB.settings(settings);
         FirestoreService.DB = DB;
     }
 
     // persist a document to a given db, collection by a given document key
-    _persistDocument = async ( db, colName, key, documentObj) => {
+    _persistDocument = async (db, colName, key, documentObj) => {
         const SUCCESS = 'success',
                 ERROR = 'error';
          const result = { status : '', message : ''};
 
-        if ( db && colName && key && documentObj) {
-            const jsonObj = JSON.parse( documentObj);
-            db.collection( colName).doc( key).set({
+        if (db && colName && key && documentObj) {
+            const jsonObj = JSON.parse(documentObj);
+            db.collection(colName).doc(key).set({
                 jsonObj
             })
-            .then( () => {
+            .then(() => {
                 result.status = SUCCESS;
             })
-            .catch( ( error) => {
+            .catch((error) => {
                 result.status = ERROR;
                result.message = error;
             });
@@ -48,13 +48,13 @@ export default class FirestoreService {
     };
 
     // gets a document from a given collection by a given document key
-    _getDocument = async ( db, colName, key) => {
+    _getDocument = async (db, colName, key) => {
         let result = {};
 
-        if ( db && colName && key) {
-            const docRef = db.collection( colName).doc( key);
+        if (db && colName && key) {
+            const docRef = db.collection(colName).doc(key);
             const DOC_RESOLVE = await docRef.get();
-            if ( DOC_RESOLVE && DOC_RESOLVE.data()) {
+            if (DOC_RESOLVE && DOC_RESOLVE.data()) {
                 result = DOC_RESOLVE.data().jsonObj;
             }
         }

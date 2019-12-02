@@ -16,14 +16,14 @@ const _getMyLocation = state => state.menu.getLocation;
 export function* _menuClick() {
 
     try {
-        const MENU = yield select( _getShowMenu);
-        if ( MENU) {
-            yield put( { type : MENU_HIDE});
+        const MENU = yield select(_getShowMenu);
+        if (MENU) {
+            yield put({ type : MENU_HIDE});
         } else {
-            yield put( { type : MENU_SHOW});
+            yield put({ type : MENU_SHOW});
         }
-    } catch ( error) {
-        yield put( { type : MENU_HIDE});
+    } catch (error) {
+        yield put({ type : MENU_HIDE});
     }
 }
 
@@ -31,20 +31,20 @@ export function* _menuClick() {
 export function* _menuLocation() {
 
     try {
-        const LOCATION = yield select( _getMyLocation);
-        if ( LOCATION) {
+        const LOCATION = yield select(_getMyLocation);
+        if (LOCATION) {
             const { USER_LOC, TIMEOUT } = yield race({ 
-                USER_LOC : call( new LocationService()._getClientLocation),
-                 TIMEOUT : call( delay, 15000)
+                USER_LOC : call(new LocationService()._getClientLocation),
+                 TIMEOUT : call(delay, 15000)
             });
-            if ( TIMEOUT) {
-                yield put( { type : MENU_HIDE});
-            } else if ( USER_LOC) {
-                yield put( { type : SEARCH_CHANGE, 
+            if (TIMEOUT) {
+                yield put({ type : MENU_HIDE});
+            } else if (USER_LOC) {
+                yield put({ type : SEARCH_CHANGE, 
                           payload : USER_LOC.lat + ',' + USER_LOC.lng });
             }
         }
-    } catch ( error) {
-        yield put( { type : MENU_HIDE});
+    } catch (error) {
+        yield put({ type : MENU_HIDE});
     }
 }

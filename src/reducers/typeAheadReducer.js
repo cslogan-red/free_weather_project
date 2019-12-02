@@ -10,16 +10,16 @@ const INIT_STATE = {
     location : '',
 };
 
-const _typeAheadReducer = ( state = INIT_STATE, action) => {
-    switch ( action.type) {
+const _typeAheadReducer = (state = INIT_STATE, action) => {
+    switch (action.type) {
         case TYPE_AHEAD_CHANGE:
-            return Object.assign( {}, state, { location : action.payload });
+            return Object.assign({}, state, { location : action.payload });
         case TYPE_AHEAD_CHANGE_SUCCESS:
-            return Object.assign( {}, state, { location : action.payload });
+            return Object.assign({}, state, { location : action.payload });
         case TYPE_AHEAD_CHANGE_INIT:
-            return Object.assign( {}, state, { location : '' });
+            return Object.assign({}, state, { location : '' });
         case TYPE_AHEAD_CHANGE_FAILURE :
-            return Object.assign( {}, state, action.error);
+            return Object.assign({}, state, action.error);
         default:
             return state;
     }

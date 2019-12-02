@@ -17,7 +17,7 @@ class SevenDayOutlook extends Component {
                             <span>{constants.outlook.title}</span>
                         </div>
                         <div className="seven-day__tile--container">
-                            {outlook.map( (conditions, i) => 
+                            {outlook.map((conditions, i) => 
                                 i > 0 && <WeatherTile conditions={conditions} key={i} />)}
                         </div>
                     </div>

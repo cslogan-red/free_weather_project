@@ -19,16 +19,6 @@ import NotFound from '../pages/NotFound';
  */
 class App extends Component {
 
-    constructor( props) {
-
-        super( props);
-        this._handleSearchChange = this._handleSearchChange.bind( this);
-        this._handleSearchTypeAhead = this._handleSearchTypeAhead.bind( this);
-        this._handleHourlyClick = this._handleHourlyClick.bind( this);
-        this._handleMenuClick = this._handleMenuClick.bind( this);
-        this._handleMyLocationClick = this._handleMyLocationClick.bind( this);
-	}
-
     // handle app initialization
     componentDidMount() {
         
@@ -37,34 +27,34 @@ class App extends Component {
     }
 
     // SearchBar change event handler
-    _handleSearchChange( locationText) {
+    _handleSearchChange = (locationText) => {
 	
         // search change action
-        this.props._handleSearchChange( locationText);
+        this.props._handleSearchChange(locationText);
     }
 
     // SearchBar type ahead event handler
-    _handleSearchTypeAhead( locationText) {
+    _handleSearchTypeAhead = (locationText) => {
 	
         // search change action
-        this.props._handleSearchTypeAhead( locationText);
+        this.props._handleSearchTypeAhead(locationText);
     }
 
     // hourly event handler
-    _handleHourlyClick() {
+    _handleHourlyClick = () => {
         
         // hourly search action
         this.props._handleHourlyClick();   
     }
 
     // handle menu touch/click
-    _handleMenuClick() {
+    _handleMenuClick = () => {
 
         this.props._handleMenuClick();
     }
 
     // my location touch/click
-    _handleMyLocationClick() {
+    _handleMyLocationClick = () => {
 
         this.props._handleMyLocationClick();
     }
@@ -91,7 +81,7 @@ class App extends Component {
                         onMyLocationClick={this._handleMyLocationClick}>
                         <Switch>
                             <Route exact path="/" 
-                                render={( props) => 
+                                render={(props) => 
                                     <Home {...props}
                                         location={location}
                                         locationName={locationName}
@@ -103,7 +93,7 @@ class App extends Component {
                             />
                             <Route path="/about" component={About} />
                             <Route path="/alerts" 
-                                   render={( props) => 
+                                   render={(props) => 
                                         <Alerts {...props}
                                             alerts={alerts}/>} />
                             <Route component={NotFound} />
@@ -115,7 +105,7 @@ class App extends Component {
     }
 }
 // mapStateToProps redux implementation
-const mapStateToProps = ( state) => ({
+const mapStateToProps = (state) => ({
     location : state.searchChange.location,
 locationName : state.searchChange.locationName,
      current : state.searchChange.current, 
@@ -131,16 +121,16 @@ typeAheadRes : state.typeAhead.location,
 });
 // mapDispatchToProps redux implementaion, handles firing actions
 // to the redux store for state update
-const mapDispatchToProps = ( dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         _checkForExistingUser : () => dispatch({
             type : LOAD_APP
         }),
-        _handleSearchChange : ( locationText) => dispatch({
+        _handleSearchChange : (locationText) => dispatch({
             type : SEARCH_CHANGE,
          payload : locationText
         }),
-        _handleSearchTypeAhead : ( locationText) => dispatch({
+        _handleSearchTypeAhead : (locationText) => dispatch({
             type : TYPE_AHEAD_CHANGE,
          payload : locationText
         }),
@@ -156,4 +146,4 @@ const mapDispatchToProps = ( dispatch) => {
     };
 }
 
-export default connect( mapStateToProps,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);

@@ -20,16 +20,16 @@ locationName : '',
      outlook : []
 };
 
-const _searchChangeReducer = ( state = INIT_STATE, action) => {
-    switch ( action.type) {
+const _searchChangeReducer = (state = INIT_STATE, action) => {
+    switch (action.type) {
         case SEARCH_CHANGE:
-            return Object.assign( {}, state, { location : action.payload });
+            return Object.assign({}, state, { location : action.payload });
         case SEARCH_CHANGE_SUCCESS:
-            return Object.assign( {}, state, action.payload);
+            return Object.assign({}, state, action.payload);
         case SEARCH_CHANGE_INIT:
-            return Object.assign( {}, state, { locationName : '' });
+            return Object.assign({}, state, { locationName : '' });
         case SEARCH_CHANGE_FAILURE :
-            return Object.assign( {}, state, action.error);
+            return Object.assign({}, state, action.error);
         default:
             return state;
     }
