@@ -56,14 +56,14 @@ export function* _searchChange() {
 const _buildSearchResult = (searchObj) => {
     let retObj = {};
 
-    if (searchObj && searchObj.locationText && searchObj.locationName && 
-         searchObj.weather) {
+    if (searchObj && searchObj.locationText && searchObj.locationName && searchObj.weather) {
         retObj = {
-            ...searchObj,
             location : searchObj.locationText,
-            ...searchObj.weather,
-            current : searchObj.weather.currently,
-            outlook : searchObj.weather.daily,
+        locationName : searchObj.locationName,
+             current : searchObj.weather.currently,
+             outlook : searchObj.weather.daily,
+              hourly : searchObj.weather.hourly,
+              alerts : searchObj.weather.alerts
         };
     }
     return retObj;
