@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #0a162f;
     background-color: #f9f9f9;
     border: 1px solid #0da6ff;
     border-radius: 5px;
@@ -22,6 +23,11 @@
     font-weight: 500;
     padding-left: .5em;
     padding-bottom: .5em;
+}
+
+.alert__header > span {
+    border-bottom: 1px solid #0da6ff;
+    display: inherit;
 }
 
 .alert__detail {

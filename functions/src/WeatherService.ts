@@ -33,6 +33,7 @@ export default class WeatherService {
             RESOLVE.daily.data.map((item) => {
                 const day = { 
                       ...item,
+                        date : item.time,
                     tempHigh : Math.round(item.temperatureHigh) + TEMP_UNIT,
                      tempLow : Math.round(item.temperatureLow) + TEMP_UNIT,
                 };
