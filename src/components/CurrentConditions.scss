@@ -1,3 +1,5 @@
+@import '../sass/constants.scss';
+
 .current__container {
 
     padding-left: .5em;
@@ -7,7 +9,7 @@
 .current__header--label {
 
     padding-bottom: .25em;
-    color: #ffffff;
+    color: $ui-white;
 }
 
 .current__rightNow, .current__hourly--wrapper {
@@ -16,11 +18,12 @@
 }
 .current__rightNow {
     
-    background-color: #f9f9f9;
+    background-color: $ui-off-white;
     padding: .25em 0 .25em .5em;
-    border: 2px solid #0da6ff;
-    border-radius: 5px;
+    border: 2px solid $ui-light-blue;
+    border-radius: $ui-border-radius;
     margin-top: .25em;
+    box-shadow: $ui-box-shadow;
 }
 
 .current__rightNow span {
@@ -32,7 +35,7 @@
 .current__rightNow--label {
     
     font-weight: 500;
-    border-bottom: 1px solid #0da6ff;
+    border-bottom: 1px solid $ui-light-blue;
     margin-bottom: .25em;
 }
 
@@ -70,8 +73,9 @@
     overflow-y: hidden;
     overflow-x: scroll;
     margin-top: .25em;
-    border-radius: 5px;
+    border-radius: $ui-border-radius;
     min-height: 60px;
+    box-shadow: $ui-box-shadow-strong;
 }
 .current__hourly-appear {
     

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './HourlyOutlook.css';
+import './HourlyOutlook.scss';
 import Icon from '../icons/Icon';
 
 class HourlyOutlook extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './WeatherAlert.css';
+import './WeatherAlert.scss';
 import constants from '../constants';
 
 class WeatherAlert extends Component {

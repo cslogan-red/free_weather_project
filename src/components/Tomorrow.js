@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Tomorrow.css';
+import './Tomorrow.scss';
 import WeatherTile from './WeatherTile';
 import HourlyOutlook from './HourlyOutlook';
 import { CSSTransitionGroup } from 'react-transition-group';

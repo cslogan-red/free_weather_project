@@ -1,3 +1,5 @@
+@import '../sass/constants.scss';
+
 .seven-day__container {
 
     padding-left: .5em;
@@ -8,7 +10,7 @@
 .seven-day__header--label {
 
     padding-bottom: .25em;
-    color: #ffffff;
+    color: $ui-white;
 }
 
 .seven-day__tile--container {

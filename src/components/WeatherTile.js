@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './WeatherTile.css';
+import './WeatherTile.scss';
 import Icon from '../icons/Icon';
 
 class WeatherTile extends Component {

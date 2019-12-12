@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './Home.scss';
 import CurrentCondtions from '../components/CurrentConditions';
 import SevenDayOutlook from '../components/SevenDayOutlook';
 import Tomorrow from '../components/Tomorrow';

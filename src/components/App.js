@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import { LOAD_APP, SEARCH_CHANGE, 
          HOURLY_CLICK, TYPE_AHEAD_CHANGE,
          MENU_CLICK, MENU_LOCATION } from '../actions/actionTypes';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './About.css';
+import './About.scss';
 import Icon from '../icons/Icon';
 import constants from '../constants';
 

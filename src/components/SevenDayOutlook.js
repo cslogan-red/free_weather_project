@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SevenDayOutlook.css';
+import './SevenDayOutlook.scss';
 import WeatherTile from './WeatherTile';
 import constants from '../constants';
 
@@ -18,7 +18,7 @@ class SevenDayOutlook extends Component {
                         </div>
                         <div className="seven-day__tile--container">
                             {outlook.map((conditions, i) => 
-                                i > 0 && <WeatherTile conditions={conditions} key={i} />)}
+                                i > 1 && <WeatherTile conditions={conditions} key={i} />)}
                         </div>
                     </div>
                 ) : ('') }

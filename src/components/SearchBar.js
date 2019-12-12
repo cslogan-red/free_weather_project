@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import './SearchBar.css';
+import './SearchBar.scss';
 import LoadingSpinner from './LoadingSpinner';
 import Icon from '../icons/Icon';
 
@@ -52,12 +52,6 @@ class SearchBar extends Component {
         this.props.history.push('/');
     }
 
-    // menu click/touch handler
-    _handleMenuClick = () => {
-
-        this.props.onMenuClick();
-    }
-
     // render implementation
     render() {
 
@@ -70,6 +64,7 @@ class SearchBar extends Component {
                               fill="#808080" />
                         <input id="searchInput" alt="Search" 
                                placeholder="Enter a location..."
+                               onClick={() => showMenu && this.props.onMenuClick()}
                                onKeyPress={this._handleSearchKeyPress}
                                onKeyUp={this._handleKeyUp} />
                     </div>
@@ -77,7 +72,7 @@ class SearchBar extends Component {
                         <LoadingSpinner showSpinner={showSpinner} />
                     </div>
                     <div className="search__icon--menu-container" 
-                         onClick={this._handleMenuClick}>
+                         onClick={this.props.onMenuClick}>
                          { showMenu ? (
                              <Icon className="search__icon--menu" name="close"
                                    fill="#808080" />

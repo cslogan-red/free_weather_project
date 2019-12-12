@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.css';
+import './Menu.scss';
 import Icon from '../icons/Icon';
 import { CSSTransitionGroup } from 'react-transition-group';
 import constants from '../constants';
