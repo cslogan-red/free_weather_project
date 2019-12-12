@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Alerts.css';
+import './Alerts.scss';
 import WeatherAlert from '../components/WeatherAlert';
 import constants from '../constants';
 

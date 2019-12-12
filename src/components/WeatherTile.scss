@@ -1,13 +1,16 @@
+@import '../sass/constants.scss';
+
 .tile__wrapper {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f9f9f9;
-    border: 1px solid #0da6ff;
-    border-radius: 5px;
+    background-color: $ui-off-white;
+    border: 1px solid $ui-light-blue;
+    border-radius: $ui-border-radius;
     padding-top: .5em;
     margin-top: .25em;
+    box-shadow: $ui-box-shadow;
 }
 
 .tile__container {
@@ -53,5 +56,5 @@
 
 .tile__img {
 
-    color: white;
+    color: $ui-white;
 }

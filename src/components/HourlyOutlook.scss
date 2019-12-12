@@ -1,3 +1,5 @@
+@import '../sass/constants.scss';
+
 .hourly__wrapper {
 
     display: flex;
@@ -11,9 +13,9 @@
     flex: 3;
     flex-direction: column;
     min-height: 60px;
-    border: 1px solid #0da6ff;
-    border-radius: 2px;
-    background-color: #f9f9f9;
+    border: 1px solid $ui-light-blue;
+    border-radius: $ui-border-radius;
+    background-color: $ui-off-white;
 }
 
 .hourly__header {

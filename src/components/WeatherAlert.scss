@@ -1,14 +1,17 @@
+@import '../sass/constants.scss';
+
 .alert__wrapper {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #0a162f;
-    background-color: #f9f9f9;
-    border: 1px solid #0da6ff;
-    border-radius: 5px;
+    background-color: $ui-off-white;
+    border: 1px solid $ui-light-blue;
+    border-radius: $ui-border-radius;
     padding: .15em;
     margin-top: .25em;
+    box-shadow: $ui-box-shadow;
 }
 
 .alert__container {
@@ -26,7 +29,7 @@
 }
 
 .alert__header > span {
-    border-bottom: 1px solid #0da6ff;
+    border-bottom: 1px solid $ui-light-blue;
     display: inherit;
 }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AppContainer.css';
+import './AppContainer.scss';
 import LoadingSpinner from './LoadingSpinner';
 import SearchBar from './SearchBar';
 import Menu from './Menu';
@@ -35,7 +35,9 @@ class AppContainer extends Component {
                               onMyLocation={this.props.onMyLocationClick}
                               onMenuClick={this.props.onMenuClick} />
                         
-                        {this.props.children}
+                        <div onClick={() => showMenu && this.props.onMenuClick()}>
+                            {this.props.children}
+                        </div>
                     </div>
                 ) }
             </div>

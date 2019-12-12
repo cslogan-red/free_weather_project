@@ -1,3 +1,5 @@
+@import '../sass/constants.scss';
+
 .tomorrow__container {
 
     margin-top: 1rem;
@@ -7,7 +9,7 @@
 .tomorrow__header--label {
 
     padding-bottom: .25em;
-    color: #ffffff;
+    color: $ui-white;
 }
 
 .tomorrow__tile--container {

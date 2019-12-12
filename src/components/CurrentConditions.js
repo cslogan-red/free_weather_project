@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CurrentConditions.css';
+import './CurrentConditions.scss';
 import HourlyOutlook from './HourlyOutlook';
 import Icon from '../icons/Icon';
 import { CSSTransitionGroup } from 'react-transition-group';

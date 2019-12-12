@@ -1,6 +1,8 @@
+@import '../sass/constants.scss';
+
 .menu__wrapper {
 
-    background-color: #FFF;
+    background-color: $ui-white;
     height: 70vh;
     min-height: 350px;
     width: 75%;
@@ -38,13 +40,13 @@
 .menu__content--link {
 
     text-decoration: none;
-    color: #13306d;
+    color: $ui-dark-blue;
 }
 
 .menu__header {
 
     text-align: center;
-    color: #13306d;
+    color: $ui-dark-blue;
     font-weight: bold;
     margin-top: .5em;
 }
@@ -60,7 +62,7 @@
 .menu__footer a {
 
     text-decoration: none;
-    color: #13306d;
+    color: $ui-dark-blue;
     font-size: calc( 8px + 2vmin);
 }
 
