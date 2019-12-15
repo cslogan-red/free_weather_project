@@ -1,16 +1,17 @@
 @import '../sass/constants.scss';
 
 .tile__wrapper {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: $ui-off-white;
     border: 1px solid $ui-light-blue;
     border-radius: $ui-border-radius;
-    padding-top: .5em;
+    padding-top: .25em;
     margin-top: .25em;
     box-shadow: $ui-box-shadow;
+    > div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .tile__container {
@@ -31,6 +32,8 @@
 
     padding-left: .5em;
     margin-bottom: -.5rem;
+    height: 65px;
+    max-height: 65px;
 }
 
 .tile__detail span {
@@ -42,8 +45,10 @@
 
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: calc(10px + 2vmin);
     margin-left: -.75em;
+    margin-top: -.75rem;
 }
 
 .tile__img--container {

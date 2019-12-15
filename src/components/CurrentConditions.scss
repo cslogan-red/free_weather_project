@@ -28,8 +28,7 @@
 
 .current__rightNow span {
 
-    font-style: italic;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(7px + 2vmin);
 }
 
 .current__rightNow--label {
@@ -44,6 +43,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    > div:first-child {
+        flex: 3 1;
+    }
+    > div:nth-child(2) {
+        flex: .5 1;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .current__temps--wrapper {

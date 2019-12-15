@@ -30,8 +30,8 @@ class CurrentConditions extends Component {
                             <div className="current__rightNow--label">{currentConditions.rightNow}</div>
                             <div className="current__rightNow--flex">
                                 <div>
-                                    <div>{current.summary}, {current.temp}</div>
-                                    <div><span>{currentConditions.feelsLike} {current.feelsLikeTemp})</span></div>
+                                    <div>{current.temp} <span>{currentConditions.feelsLike} {current.feelsLikeTemp})</span></div>
+                                    <div>{current.summary}</div>
                                     <div>{currentConditions.humidity} {current.humidity}%</div>
                                     <div>{currentConditions.wind} {current.windSpeed}{currentConditions.mph}</div>
                                     <div className="current__temps--wrapper">
